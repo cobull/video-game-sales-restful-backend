@@ -1,0 +1,55 @@
+# VideoGameSales
+
+###
+# @name findAll
+GET http://localhost:8080/api/videogames
+
+###
+# @name findById
+GET http://localhost:8080/api/videogames/id=1493
+
+###
+# @name findByGenre
+GET http://localhost:8080/api/videogames/genre=Action
+
+###
+# @name create
+POST http://localhost:8080/api/videogames
+Content-Type: application/json
+
+{
+  "title": "NewGame13",
+  "console": "Xbox",
+  "genre": "Action",
+  "publisher": "CBGAMES",
+  "developer": "CBGAMES",
+  "critic_score": 10.0,
+  "total_sales": 9.9,
+  "na_sales": 5.0,
+  "jp_sales": 2.2,
+  "pal_sales": 0.5,
+  "other_sales": 0.1,
+  "release_date": "2025-01-07"
+}
+
+###
+# @name delete
+DELETE http://localhost:8080/api/videogames/id=1000
+
+###
+# @name updateById
+PUT http://localhost:8080/api/videogames/id=64057
+Content-Type: application/json
+
+{
+  "console": "PS5"
+}
+
+
+
+
+
+
+
+
+
