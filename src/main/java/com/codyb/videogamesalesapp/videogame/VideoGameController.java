@@ -39,8 +39,8 @@ public class VideoGameController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("")
-    void create(@Valid @RequestBody VideoGame videoGame) {
-        Number num = videoGameRepository.create(videoGame);
+    Number create(@Valid @RequestBody VideoGame videoGame) {
+        return videoGameRepository.create(videoGame);
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
@@ -49,6 +49,7 @@ public class VideoGameController {
         videoGameRepository.delete(id);
     }
 
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     @PutMapping("/id={id}")
     void update(@PathVariable Integer id, @RequestBody VideoGame videoGame) {
         videoGameRepository.update(id, videoGame);
